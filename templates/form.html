@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+    {% block content %}
+    <br />
+    <br />
+    <br />
+    <br />
+   
+<div class="order-form">
+    <div class="container">
+    <form>
+         <h1>Send Enquiry</h1>
+    <!--     <label>Full Name</label> -->
+        <input type="text" name="Name" placeholder="Full name" required>
+
+      <!--   <label>Email</label> -->
+        <input type="email" name="Email" placeholder="Email" required>
+
+       <!--  <label>Phone</label> -->
+        <input type="phone" name="Phone" placeholder="Phone" required>
+
+     <!--    <label>Product Name</label> -->
+        <input type="product name" name="product name" placeholder="Product Name" required>
+
+      <!--    <label>Product Code</label> -->
+        <input type="product code" name="product code" placeholder="Product Code" required>
+
+        <!--  <label>Location</label> -->
+        <input type="location" name="location" placeholder="Location" required>
+
+     <!--    <label>Description</label> -->
+        <textarea name="Message" placeholder="Message" required></textarea>
+        <button type="submit">Book Now</button>
+    </form>
+   
+</div>
+</div>
+{% endblock content %}

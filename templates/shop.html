@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- navbar ends -->
+<img src="{% static 'image/cloth-2.jpg'%}" alt="" width="100%">
+
+
+<!-- shop -->
+<div class="shop">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 shop1">
+				<img src="{% static 'image/dress-design.gif'%}" alt="" width="100%">
+				<img src="{% static 'image/dress-design1.gif'%}" alt="" width="100%">
+			</div>
+			<div class="col-md-8">
+				<img src="{% static 'image/inta-image.jpg'%}" alt="" width="100%">
+				<h1>Inta Fashion Style</h1>
+				<p>Fashion design is the art of applying design, aesthetics, clothing construction and natural beauty to clothing and its accessories. It is influenced by culture and different trends, and has varied over time and place. "A fashion designer creates clothing, including dresses, suits, pants, and skirts, and accessories like shoes and handbags, for consumers. He or she can specialize in clothing, accessory, or jewelry design, or may work in more than one of these areas. Due to the time required to put a garment out in market, designers must anticipate changes to consumer desires. Fashion designers are responsible for creating looks for individual garments, involving shape, color, fabric, trimming, and more.<br>
+
+				Designers conduct research on fashion trends and interpret them for their audience. Their specific designs are used by manufacturers. This is the essence of a designer's role; however, there is variation within this that is determined by the buying and merchandising approach. When thinking of product quality control budget retailers use inexpensive fabrics to have a quick turn around on production, but high-end retailers will ensure that the best available fabrics are used and lots of time is utilized.
+				<br>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- shop ends -->
+
+
+<!-- collection -->
+<div class="collection">
+	<div class="container-fluid">
+		<div class="row">
+      {% for product in products %}
+			<div class="col-md-3">
+				<img src="{{product.image.url}}" alt="" width="100%">
+					<a href="{% url 'home:order_form' %}"  style="text-decoration: none;">	<h4>SHOP NOW</h4></a>
+			</div>
+      {% endfor %}
+		</div>
+	</div>
+</div>
+<!-- collection ends -->
+
+<!-- INTA DETAILS -->
+<div class="inta-details">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-lg-12">
+				<p>Their specific designs are used by manufacturers. This is the essence of a designer's role; however, there is variation within this that is determined by the buying and merchandising approach. When thinking of product quality control budget retailers use inexpensive fabrics to have a quick turn around on production, but high-end retailers will ensure that the best available fabrics are used and lots of time is utilized.
+
+Fashion designers attempt to design clothes which are functional as well as aesthetically pleasing. They consider who is likely to wear a garment and the situations in which it will be worn, and they work within a wide range of materials, colors, patterns and styles. Though most clothing worn for everyday wear falls within a narrow range of conventional styles, unusual garments are usually sought for special occasions such as evening wear or party dresses.
+
+Some clothes are made specifically for an individual, as in the case of haute couture or bespoke tailoring. Today, most clothing is designed for the mass market, especially casual and every-day wear are called ready to wear or known as fast fashion.</p>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content %}
