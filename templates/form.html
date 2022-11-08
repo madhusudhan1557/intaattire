@@ -9,29 +9,33 @@
    
 <div class="order-form">
     <div class="container">
-    <form>
+    <form action="{% url 'home:sendorder'%}" method="post">
+        {% csrf_token %}
          <h1>Send Enquiry</h1>
     <!--     <label>Full Name</label> -->
-        <input type="text" name="Name" placeholder="Full name" required>
+        <input type="text" name="fullname" placeholder="Full name" required>
 
       <!--   <label>Email</label> -->
-        <input type="email" name="Email" placeholder="Email" required>
+        <input type="email" name="email" placeholder="Email" required>
 
        <!--  <label>Phone</label> -->
-        <input type="phone" name="Phone" placeholder="Phone" required>
+        <input type="phone" name="phone" placeholder="Phone" required>
 
      <!--    <label>Product Name</label> -->
-        <input type="product name" name="product name" placeholder="Product Name" required>
+        <input type="product name" name="productname" placeholder="Product Name" required>
 
       <!--    <label>Product Code</label> -->
-        <input type="product code" name="product code" placeholder="Product Code" required>
+        <input type="product code" name="productcode" placeholder="Product Code" required>
 
         <!--  <label>Location</label> -->
         <input type="location" name="location" placeholder="Location" required>
 
      <!--    <label>Description</label> -->
-        <textarea name="Message" placeholder="Message" required></textarea>
-        <button type="submit">Book Now</button>
+        <textarea name="message" placeholder="Message" required></textarea>
+      
+     <button type="submit">Book Now</button>
+
+       
     </form>
    
 </div>

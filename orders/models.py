@@ -11,6 +11,7 @@ class OrderModel(models.Model):
     location = models.CharField(max_length=250, blank=True, null=True)
     paymentcode = models.CharField(max_length=250, blank=True, null=True)
     message = models.CharField(max_length=250, blank=True, null=True)
+    remarks = models.CharField(max_length=250, blank=True, null=True)
     
 
     def __str__(self):
