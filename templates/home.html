@@ -117,7 +117,7 @@
       <div class="col-md-12 col-sm-12 col-lg-12">
         <h1><b>FEATURED PRODUCTS</b></h1>
       </div>
-      {% for product in products|slice:":3" %}
+      {% for product in products|slice:":4" %}
       <div class="col-md-3">
         <!-- bootstrap -->
         <h4><b>Product Code: {{product.productcode}}</b></h4>
@@ -153,7 +153,7 @@
       <div class="col-md-12 col-sm-12 col-lg-12">
         <h1><b>TOP SELLING PRODUCTS</b></h1>
       </div>
-      {% for product in products|slice:":3" %}
+      {% for product in products|slice:":4" %}
       <div class="col-md-3">
         <!-- bootstrap -->
         <h4><b>Product Code: {{product.productcode}}</b></h4>
@@ -165,6 +165,9 @@
           <a href="{% url 'home:order_form' %}" style="text-decoration: none"
             ><h5>Order Now</h5></a
           >
+          <a href="#"  style="text-decoration: none"
+          ><h5>Call Now</h5></a
+        >
         </div>
         <div class="col-md-6">
           <a href="tel: 9847850000" style="text-decoration: none"
