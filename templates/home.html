@@ -14,24 +14,18 @@
       <img src="{% static 'image/cloth.jpg' %}" alt="Chania" width="100%" />
     </div>
 
-    <div class="item">
-      <img
-        src="{% static 'image/cloth-3.jpg' %}"
-        alt="Chania"
-        width="100%"
-        alt="Chania"
-        width="100%"
-      />
-    </div>
-    <div class="item">
-      <img
-        src="{% static 'image/cloth-2.jpg' %}"
-        alt="Chania"
-        width="100%"
-        alt="Chania"
-        width="100%"
-      />
-    </div>
+   {% for banner in banners %}
+   <div class="item">
+    <img
+      src="{{banner.image.url}}"
+      alt="Chania"
+      width="100%"
+      alt="Chania"
+      width="100%"
+    />
+  </div>
+   {% endfor %}
+
 
     <div class="item">
       <img src="{% static 'image/cloth-1.jpg' %}" alt="Flower" width="100%" />
